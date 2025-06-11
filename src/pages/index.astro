@@ -1,4 +1,7 @@
 ---
+import { getCollection } from '../utils/getCollection.js';
+
+const blogposts = getCollection('blogposts');
 
 ---
 
@@ -12,5 +15,17 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+
+<ul>
+    {blogposts.map(post => (
+	  <li>
+		<a href={post.url || '#'}>
+		  <h2>{post.title}</h2>
+		  <p>{post.description}</p>
+		  <time>{post.date}</time>
+		</a>
+	  </li>
+    ))}
+  </ul>
 	</body>
 </html>
