@@ -1,0 +1,97 @@
+backend:
+  name: github
+  repo: annevd/portfolio-2025
+  branch: cms-updates
+
+media_folder: "src/assets/images" # Location where files will be stored in the repo
+public_folder: "/assets/images" # The src attribute for uploaded media
+
+collections:
+  - name: "blogposts"
+    label: "Blog Post"
+    folder: "src/content/blogposts"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - 
+        label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "DD-MM-YYYY"
+        date_format: "DD-MM-YYYY"
+        required: false
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - 
+        label: "Featured Image"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Image URL", name: "url", widget: "image", required: false }
+          - { label: "Alt Text", name: "alt", widget: "string", required: false }
+      - 
+        label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        required: false
+      - 
+        label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
+
+  - name: "artworks"
+    label: "Artwork"
+    folder: "src/content/artworks"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - 
+        label: "Image"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Image URL", name: "url", widget: "image", required: false }
+          - { label: "Alt Text", name: "alt", widget: "string", required: false }
+          - { label: "Width", name: "width", widget: "number", required: false }
+          - { label: "Height", name: "height", widget: "number", required: false }
+      - 
+        label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "DD-MM-YYYY"
+        date_format: "DD-MM-YYYY"
+        required: false
+
+  - name: "projects"
+    label: "Project"
+    folder: "src/content/projects"
+    create: true
+    fields:
+      - { label: "URL", name: "url", widget: "string", required: true }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - 
+        label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "DD-MM-YYYY"
+        date_format: "DD-MM-YYYY"
+        required: false
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "GitHub URL", name: "githubUrl", widget: "string", required: false }
+      - 
+        label: "Image"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Image URL", name: "url", widget: "image", required: false }
+          - { label: "Alt Text", name: "alt", widget: "string", required: false }
+      - 
+        label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        required: false
