@@ -5,8 +5,8 @@ date: 2024-02-08
 description: Project waar ik een visitekaartje moest ontwerpen en bouwen.
 githubUrl: https://github.com/Annevd/connect-your-tribe-profile-card
 tags:
-  - HTML
-  - CSS
-  - JS
-  - NodeJS
+    - HTML
+    - CSS
+    - JS
+    - NodeJS
 ---

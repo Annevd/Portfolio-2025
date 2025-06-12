@@ -3,15 +3,16 @@ title: We ❤️ Web met Niels Leenheer
 date: 2025-04-25
 description: Een we-love-web over Browsers en HTML
 image:
-  url: /assets/images/niels.jpg
+    url: /assets/images/niels.jpg
 tags:
-  - Browsers
-  - HTML
+    - Browsers
+    - HTML
 ---
+
 ## Over Niels
 
 - Altijd bezig met webstanddaarden
-- Werkt bij Salonhub 
+- Werkt bij Salonhub
 - Web Developer
 - [Website](https://nielsleenheer.com/)
 
@@ -27,6 +28,7 @@ Als je browser geen scripting ondersteund, ondersteund het ook geen noscript.
 De enige functie van de noscript tag is niks laten zien: alles wat in de tag staat negeren.
 
 **Voorbeeld use case:**
+
 ```HTML
 <noscript>
     Wat is dit... 1995?
@@ -80,8 +82,3 @@ Als het eerste teken maar een ASCII letter is. Het is misschien geen HTML tag, m
 ### Tree builder
 
 Krijgt tokens van de tokenizer en bouwt daarmee de DOM tree.
-
-
-
-
-
