@@ -17,8 +17,8 @@ collections:
         label: "Date"
         name: "date"
         widget: "datetime"
-        format: "DD-MM-YYYY"
-        date_format: "DD-MM-YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
         required: false
       - { label: "Description", name: "description", widget: "text", required: false }
       - 
@@ -61,8 +61,8 @@ collections:
         label: "Date"
         name: "date"
         widget: "datetime"
-        format: "DD-MM-YYYY"
-        date_format: "DD-MM-YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
         required: false
 
   - name: "projects"
@@ -76,8 +76,8 @@ collections:
         label: "Date"
         name: "date"
         widget: "datetime"
-        format: "DD-MM-YYYY"
-        date_format: "DD-MM-YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
         required: false
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "GitHub URL", name: "githubUrl", widget: "string", required: false }
