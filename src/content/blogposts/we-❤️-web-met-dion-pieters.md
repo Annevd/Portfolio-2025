@@ -1,6 +1,6 @@
 ---
 title: We ❤️ Web met Dion Pieters
-date: 18-10-2024
+date: 2024-10-18
 description: Creative Developer en docent FDND over zijn portfolio
 image:
   url: /assets/images/dion.png
