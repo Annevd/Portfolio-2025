@@ -3,14 +3,16 @@ title: We ❤️ Web met Dion Pieters
 date: 2024-10-18
 description: Creative Developer en docent FDND over zijn portfolio
 image:
-  url: /assets/images/dion.png
+    url: /assets/images/dion.png
 tags:
-  - Creative
-  - Portfolio
+    - Creative
+    - Portfolio
 ---
+
 > From Concept creation to The Art of Development
 
 ## Over Dion
+
 - Heeft in Arnhem Informatica en CMD gestudeerd
 - Afstudeerstage bij Build in Amsterdam
 - Heeft bij verschillende bedrijven gewerkt zoals o.a. Spotify
