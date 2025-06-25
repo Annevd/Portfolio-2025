@@ -1,0 +1,55 @@
+:root {
+    /* --- Colors --- */
+
+    --c-red: #b3261e;
+    --c-beige: #faf7f2;
+    --c-beige--dark: #f0eae1;
+    --c-charcoal: #1e1e1e;
+    --c-taupe: #9e8a7a;
+    --c-brown: #5b4a42;
+    --c-brown--dark: #433833;
+    --c-pink: #de9c95;
+
+    /* --- Spacing / sizing ---*/
+
+    /* Gutters */
+    --p-gutter--xsmall: 5px;
+    --p-gutter--small: 10px;
+    --p-gutter: 20px;
+    --p-gutter--medium: 30px;
+    --p-gutter--large: 40px;
+    --p-gutter--xlarge: 50px;
+
+    /* Borders */
+    --b-radius--xsmall: 5px;
+    --b-radius--small: 10px;
+    --b-radius: 20px;
+    --b-radius--large: 32px;
+    --b-radius--round: 50%;
+
+    /* --- Typography --- */
+
+    /* Base text sizes */
+    --font-size-hero: clamp(3rem, 8vw, 6rem); /* 64–96px */
+    --font-size-heading-1: clamp(3rem, 6vw, 4rem); /* 48–64px */
+    --font-size-heading-2: clamp(2.5rem, 5vw, 3rem); /* 40–48px */
+    --font-size-heading-3: clamp(2rem, 4vw, 2.25rem); /* 32–36px */
+    --font-size-heading-4: clamp(1.5rem, 3vw, 1.75rem); /* 24–28px */
+    --font-size-text-large: 1.25rem; /* 20px */
+    --font-size-text: 1rem; /* 16px */
+    --font-size-text-small: 0.875rem; /* 14px */
+    --font-size-text-xsmall: 0.75rem; /* 12px */
+
+    /* Contextual use */
+    --font-size-text-intro: clamp(1.5rem, 3vw, 2rem); /* 24–32px */
+    --font-size-text-card: 1.25rem; /* 20px */
+    --font-size-text-tag: 1rem;
+
+    /* --- Base colors --- */
+
+    --text-color: var(--c-brown--dark);
+    --heading-color: var(--c-red);
+    --accent-color: var(--c-red);
+    --link-color: var(--c-red);
+    --body-background: var(--c-beige);
+}
