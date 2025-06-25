@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Clash Display";
+    src: url("/fonts/ClashDisplay-Variable.ttf") format("ttf");
+    font-weight: 200 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Variable.ttf") format("ttf");
+    font-weight: 300 900;
+    font-display: swap;
+}
+
+:root {
+    --font-heading: "Clash Display", sans-serif;
+    --font-body: "Satoshi", sans-serif;
+
+    --font-weight-thin: 200; /* valid only for Clash */
+    --font-weight-extralight: 300; /* valid for Clash & Satoshi */
+    --font-weight-light: 400; /* valid for Clash & Satoshi */
+    --font-weight-medium: 500; /* valid for Clash & Satoshi */
+    --font-weight-semibold: 600; /* valid for Clash & Satoshi */
+    --font-weight-bold: 700; /* valid for Clash & Satoshi */
+    --font-weight-extrabold: 800; /* valid only for Satoshi */
+    --font-weight-black: 900; /* valid only for Satoshi */
+}
