@@ -5,6 +5,8 @@ date: 2024-05-29
 description: Voor dit project moest ik een interface ontwerpen en maken voor een
     opdrachtgever waar gebruikers blij van worden.
 githubUrl: https://github.com/Annevd/pleasurable-ui
+image:
+  url: /assets/images/tumi-mundo.png
 tags:
     - HTML
     - CSS
