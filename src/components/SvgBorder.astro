@@ -1,0 +1,60 @@
+<svg
+    class="project__border"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 100 100"
+    preserveAspectRatio="none"
+>
+    <defs>
+        <filter id="brushy-horizontal">
+            <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.008 0.5"
+                numOctaves="2"
+                result="turbulence"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="0.8"
+            ></feDisplacementMap>
+        </filter>
+
+        <filter id="brushy-vertical">
+            <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.5 0.015"
+                numOctaves="2"
+                result="turbulence"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2"
+            ></feDisplacementMap>
+        </filter>
+    </defs>
+
+    <g stroke="currentColor" stroke-width="0.8">
+        <path
+            d="M 9,0.6 L 91,0.6
+         M 9,99.4 L 91,99.4"
+            filter="url(#brushy-horizontal)"></path>
+
+        <path
+            d="M 0.6,9 L 0.6,91
+         M 99.4,9 L 99.4,91"
+            filter="url(#brushy-vertical)"></path>
+
+        <path
+            d="M 9,0.6 A 8.4,8.4 0 0 0 0.6,9
+         M 91,0.6 A 8.4,8.4 0 0 1 99.4,9
+         M 0.6,91 A 8.4,8.4 0 0 0 9,99.4
+         M 91,99.4 A 8.4,8.4 0 0 0 99.4,91"
+            filter="url(#brushy-horizontal)"></path>
+    </g>
+</svg>
+
+<style>
+    .project__border {
+        position: absolute;
+        inset: -4px;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        pointer-events: none;
+        overflow: visible;
+        color: var(--c-red);
+    }
+</style>
