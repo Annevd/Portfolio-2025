@@ -1,0 +1,131 @@
+---
+import SvgBorder from "./SvgBorder.astro";
+const { project } = Astro.props;
+---
+
+<li class="project">
+    <SvgBorder />
+
+    <div class="project__content">
+        <figure class="project__image-container">
+            {
+                project.data.image && project.data.image.url ? (
+                    <img
+                        class="project__image"
+                        src={project.data.image.url}
+                        alt=""
+                        loading="lazy"
+                        width="300"
+                        height="200"
+                    />
+                ) : (
+                    <img
+                        class="project__image"
+                        src="/assets/images/fallback-image.png"
+                        alt=""
+                        loading="lazy"
+                        width="300"
+                        height="200"
+                    />
+                )
+            }
+        </figure>
+        <div class="project__text">
+            <h3 class="project__text-title">{project.data.title}</h3>
+            <p class="project__description">{project.data.description}</p>
+        </div>
+
+        <div class="project__tags">
+            {
+                project.data.tags
+                    .filter((tag) => tag.trim() !== "")
+                    .map((tag) => <span class="project__tag">{tag}</span>)
+            }
+        </div>
+    </div>
+</li>
+
+<style>
+    .project {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .project__content {
+        background: var(--c-beige--dark);
+        border-radius: var(--b-radius--large);
+        box-shadow: 0px 8px 20px 0px rgba(91, 74, 66, 0.3); /* Fallback shadow */
+        box-shadow: 0px 8px 20px 0px
+            color-mix(in srgb, var(--c-brown) 30%, transparent);
+        display: flex;
+        flex-direction: column;
+        gap: var(--p-gutter);
+        height: 100%;
+        padding: var(--p-gutter);
+        width: 100%;
+    }
+
+    .project__image-container {
+        aspect-ratio: 16 / 11;
+        background: var(--c-beige);
+        border-radius: var(--b-radius);
+        width: 100%;
+    }
+
+    .project__image {
+        border-radius: var(--b-radius);
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .project__text {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: var(--p-gutter);
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .project__text-title {
+        transition: font-size 0.2s ease-out;
+    }
+
+    .project__text-title.is-long {
+        font-size: var(--font-size-heading-4);
+        line-height: 1;
+    }
+
+    .project__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--p-gutter--small);
+        justify-content: center;
+    }
+
+    .project__tag {
+        background: var(--c-red);
+        border-radius: var(--b-radius--xsmall);
+        color: var(--c-beige);
+        font-size: var(--font-size-text-small);
+        font-weight: var(--font-weight-semibold);
+        padding: var(--p-gutter--xsmall);
+    }
+
+    @container project-list (max-width: 330px) {
+        .project__image-container {
+            aspect-ratio: 16 / 9;
+        }
+        .project__description {
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    }
+</style>

@@ -1,0 +1,152 @@
+---
+import { getCollection } from "astro:content";
+import Project from "./Project.astro";
+
+let projects = await getCollection("projects");
+
+projects.sort((a, b) => {
+    const dateA = new Date(String(a.data.date ?? "")).getTime();
+    const dateB = new Date(String(b.data.date ?? "")).getTime();
+    return dateB - dateA;
+});
+---
+
+<div class="projects__container">
+    <h2 class="projects__title">Featured<br /> Work</h2>
+
+    <ul class="projects__list">
+        {projects.map((project) => <Project project={project} />)}
+    </ul>
+</div>
+
+<div class="spacer"></div>
+
+<style>
+    .projects__container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--p-gutter--xlarge);
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .projects__title {
+        text-align: center;
+    }
+
+    .projects__list {
+        aspect-ratio: 350 / 550;
+        container-type: inline-size;
+        container-name: project-list;
+        margin: 0 auto;
+        max-width: 400px;
+        padding: 0;
+        position: relative;
+        width: 90vw;
+
+    }
+
+    .spacer {
+        height: 60vh;
+        opacity: 0.2;
+    }
+
+    @media (min-width: 400px) {
+        .projects__list {
+            aspect-ratio: 350 / 500;
+        }
+    }
+</style>
+
+<script>
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    function checkAndFitAllTitles() {
+
+        const allTitles = gsap.utils.toArray<HTMLElement>(
+            ".project__text-title"
+        );
+
+        allTitles.forEach((title) => {
+            if (!title) return;
+
+            title.classList.remove("is-long");
+
+            const style = window.getComputedStyle(title);
+            const lineHeight = parseFloat(style.lineHeight);
+            const maxAllowedHeight = lineHeight * 2.1;
+            
+            if (title.scrollHeight > maxAllowedHeight) {
+                title.classList.add("is-long");
+            }
+        });
+    }
+
+    window.addEventListener("load", () => {
+        checkAndFitAllTitles();
+        window.addEventListener("resize", checkAndFitAllTitles);
+
+        let mm = gsap.matchMedia();
+
+        mm.add("(max-width: 549px)", () => {
+            gsap.fromTo(
+                ".project:not(:first-child)",
+                {
+                    x: (index) =>
+                        index % 2 === 0
+                            ? -window.innerWidth * 1.5
+                            : window.innerWidth * 1.5,
+                    rotate: (index) => (index % 2 === 0 ? -45 : 45),
+                },
+                {
+                    x: 0,
+                    rotate: () => gsap.utils.random(-5, 5),
+                    y: (index) => index * 4,
+                    stagger: 0.4,
+                    scrollTrigger: {
+                        trigger: ".projects__container",
+                        pin: true,
+                        scrub: 1,
+                        start: "top top",
+                        end: "+=5000",
+                        invalidateOnRefresh: true,
+                    },
+                }
+            );
+        });
+
+        mm.add("(min-width: 550px)", () => {
+            gsap.fromTo(
+                ".project:not(:first-child)",
+                {
+                    x: (index) => {
+                        return index % 2 === 0
+                            ? -window.innerWidth * 1.2
+                            : window.innerWidth * 1.2;
+                    },
+                    rotate: (index) => {
+                        return index % 2 === 0 ? -90 : 90;
+                    },
+                },
+                {
+                    x: 0,
+                    rotate: () => gsap.utils.random(-5, 5),
+                    y: (index) => index * 4,
+                    stagger: 0.4,
+                    scrollTrigger: {
+                        trigger: ".projects__container",
+                        pin: true,
+                        scrub: 1,
+                        start: "top top",
+                        end: "+=5000",
+                        invalidateOnRefresh: true,
+                    },
+                }
+            );
+        });
+    });
+</script>
