@@ -2,15 +2,13 @@
 url: https://pleasurable-ui-p9p8.onrender.com/
 title: Tumi Mundo Pleasurable Interface
 date: 2024-05-29
-description: Voor dit project moest ik een interface ontwerpen en maken voor een
-    opdrachtgever waar gebruikers blij van worden.
+description: For this project I had to design and create an interface for a
+  client that would make users happy.
 githubUrl: https://github.com/Annevd/pleasurable-ui
 image:
   url: /assets/images/tumi-mundo.png
 tags:
-    - HTML
-    - CSS
-    - JS
-    - Pleasurable
-    - NodeJS
+  - "2024"
+  - Pleasurable
+  - NodeJS
 ---
