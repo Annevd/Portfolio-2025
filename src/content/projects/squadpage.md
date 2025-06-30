@@ -12,4 +12,5 @@ tags:
   - "2024"
   - Interactive
   - NodeJS
+  - Scroll Driven Animations
 ---

@@ -1,0 +1,64 @@
+<footer class="footer">
+    <ul class="footer__list">
+        <li class="footer__item">
+            <a href="https://github.com/Annevd" class="footer__link">GitHub</a>
+        </li>
+        <li class="footer__item">
+            <a href="https://codepen.io/Annevd" class="footer__link">CodePen</a>
+        </li>
+        <li class="footer__item">
+            <a
+                href="https://www.linkedin.com/in/anne-van-dijk-617a472a4"
+                class="footer__link">LinkedIn</a
+            >
+        </li>
+        <li class="footer__item">
+            <a
+                href="https://www.instagram.com/xartisticanne?igsh=ZHAweG96MDVjZXc="
+                class="footer__link">Instagram</a
+            >
+        </li>
+    </ul>
+
+    <p class="footer__copyright">&copy; 2025 Anne van Dijk</p>
+</footer>
+
+<style>
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: var(--p-gutter--large);
+        padding: var(--p-gutter);
+    }
+
+    .footer__list {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--p-gutter--small);
+    }
+
+    .footer__link {
+        color: var(--c-brown);
+        font-weight: var(--font-weight-extrabold);
+        text-decoration: underline;
+        text-decoration-color: var(--c-pink);
+        text-decoration-thickness: 2px;
+        transition: color 0.3s ease-out;
+
+        &:hover {
+            color: var(--link-color);
+        }
+    }
+
+    .footer__copyright {
+        font-weight: var(--font-weight-extrabold);
+    }
+
+    @media (min-width: 600px) {
+        .footer {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+</style>

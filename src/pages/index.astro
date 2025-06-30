@@ -1,6 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
 import ProjectList from "../components/ProjectList.astro";
+import Hero from "../components/Hero.astro";
+import Intro from "../components/Intro.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout><ProjectList></BaseLayout>
+<BaseLayout>
+    <Hero />
+    <Intro />
+    <ProjectList />
+    <Footer />
+</BaseLayout>
