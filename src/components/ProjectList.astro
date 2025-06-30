@@ -11,7 +11,7 @@ projects.sort((a, b) => {
 });
 ---
 
-<div class="projects__container">
+<div class="projects__container" id="archive">
     <h2 class="projects__title">Featured<br /> Work</h2>
 
     <ul class="projects__list">
@@ -27,7 +27,7 @@ projects.sort((a, b) => {
         display: flex;
         flex-direction: column;
         gap: var(--p-gutter--xlarge);
-        height: 100vh;
+        height: 100svh;
         justify-content: center;
         overflow-x: hidden;
     }
@@ -114,6 +114,7 @@ projects.sort((a, b) => {
                         scrub: 1,
                         start: "top top",
                         end: "+=5000",
+                        anticipatePin: 1,
                         invalidateOnRefresh: true,
                     },
                 }
@@ -144,6 +145,7 @@ projects.sort((a, b) => {
                         scrub: 1,
                         start: "top top",
                         end: "+=5000",
+                        anticipatePin: 1,
                         invalidateOnRefresh: true,
                     },
                 }

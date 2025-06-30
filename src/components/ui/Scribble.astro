@@ -1,4 +1,9 @@
-<svg class="scribble" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 720 21">
+<svg
+    class="scribble"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 720 21"
+>
     <path
         stroke="currentColor"
         stroke-width="3"
@@ -10,3 +15,18 @@
         color: var(--c-red);
     }
 </style>
+
+<script>
+    import gsap from "gsap";
+    import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+
+    gsap.registerPlugin(DrawSVGPlugin);
+
+    document.fonts.ready.then(() => {
+        gsap.from(".scribble path", {
+            drawSVG: "0%",
+            duration: 2,
+            ease: "power1.out",
+        });
+    });
+</script>

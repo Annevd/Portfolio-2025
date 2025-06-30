@@ -1,7 +1,7 @@
 ---
 import Scribble from "./ui/Scribble.astro";
 import Circle from "./ui/Circle.astro";
-import ArrowDown from "./Icons/ArrowDown.astro";
+import ArrowDown from "./icons/ArrowDown.astro";
 ---
 
 <div class="hero__container">
@@ -15,7 +15,7 @@ import ArrowDown from "./Icons/ArrowDown.astro";
         Developer & Artist
     </p>
 
-    <p class="hero__cta">Scroll to explore <ArrowDown /></p>
+    <a class="hero__cta" href="#">Scroll to explore <ArrowDown /></a>
 </div>
 
 <style>
@@ -61,5 +61,48 @@ import ArrowDown from "./Icons/ArrowDown.astro";
         position: absolute;
         bottom: var(--p-gutter);
         text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            animation: bounce 1.5s ease infinite;
+        }
+    }
+
+    @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-20px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
     }
 </style>
+
+<script>
+    import gsap from "gsap";
+    import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+    gsap.registerPlugin(ScrollSmoother);
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const smoother = ScrollSmoother.get();
+
+        const cta = document.querySelector(".hero__cta");
+        cta?.addEventListener("click", (e) => {
+            e.preventDefault();
+            const target = document.querySelector("#archive");
+
+            if (target && smoother) {
+                smoother.scrollTo(target, true);
+            }
+        });
+    });
+</script>
