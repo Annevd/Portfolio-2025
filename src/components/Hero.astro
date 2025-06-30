@@ -1,0 +1,65 @@
+---
+import Scribble from "./ui/Scribble.astro";
+import Circle from "./ui/Circle.astro";
+import ArrowDown from "./Icons/ArrowDown.astro";
+---
+
+<div class="hero__container">
+    <div class="hero__title-container">
+        <h1 class="hero__title">Anne van Dijk</h1>
+        <Scribble />
+    </div>
+
+    <p class="hero__subtitle">
+        <span class="hero__subtitle-wrapper">Creative <Circle /></span> Frontend
+        Developer & Artist
+    </p>
+
+    <p class="hero__cta">Scroll to explore <ArrowDown /></p>
+</div>
+
+<style>
+    .hero__container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--p-gutter--xlarge);
+        justify-content: center;
+        min-height: 100vh; /* fallback for older browsers */
+        min-height: 100svh;
+        padding: var(--p-gutter);
+        position: relative;
+    }
+
+    .hero__title-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--p-gutter--xsmall);
+    }
+
+    .hero__title {
+        font-size: var(--font-size-hero);
+        text-align: center;
+    }
+
+    .hero__subtitle {
+        font-size: var(--font-size-text-intro);
+        text-align: center;
+    }
+
+    .hero__subtitle-wrapper {
+        position: relative;
+    }
+
+    .hero__cta {
+        align-items: center;
+        color: var(--accent-color);
+        display: flex;
+        font-size: var(--font-size-text-large);
+        font-weight: var(--font-weight-extrabold);
+        gap: var(--p-gutter--small);
+        position: absolute;
+        bottom: var(--p-gutter);
+        text-align: center;
+    }
+</style>

@@ -42,8 +42,8 @@
 
     /* Contextual use */
     --font-size-text-intro: clamp(1.5rem, 3vw, 2rem); /* 24–32px */
-    --font-size-text-card: 1.25rem; /* 20px */
-    --font-size-text-tag: 1rem;
+    --font-size-text-card: var(--font-size-text-large); /* 20px */
+    --font-size-text-tag: var(--font-size-text); /* 12px */
 
     /* --- Base colors --- */
 
