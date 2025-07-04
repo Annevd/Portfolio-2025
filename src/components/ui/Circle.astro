@@ -1,4 +1,9 @@
-<svg class="circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 96 40.851">
+<svg
+    class="circle"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 96 40.851"
+>
     <path
         stroke="currentColor"
         stroke-linecap="round"
@@ -21,3 +26,19 @@
         width: 100%;
     }
 </style>
+
+<script>
+    import gsap from "gsap";
+    import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+
+    gsap.registerPlugin(DrawSVGPlugin);
+
+    document.fonts.ready.then(() => {
+        gsap.from(".circle path", {
+            drawSVG: "0%",
+            duration: 2,
+            ease: "power3.out",
+            delay: 2,
+        });
+    });
+</script>

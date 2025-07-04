@@ -8,8 +8,33 @@ import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout>
-    <Hero />
-    <Intro />
-    <ProjectList />
-    <Footer />
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main>
+                <Hero />
+                <Intro />
+                <!-- <ProjectList /> -->
+            </main>
+            <Footer />
+        </div>
+    </div>
 </BaseLayout>
+
+<script>
+    import gsap from "gsap";
+    import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+    gsap.registerPlugin(ScrollSmoother);
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const mm = gsap.matchMedia();
+
+        mm.add("(min-width: 768px)", () => {
+            ScrollSmoother.create({
+                smooth: 1,
+                effects: true,
+                normalizeScroll: true,
+            });
+        });
+    });
+</script>

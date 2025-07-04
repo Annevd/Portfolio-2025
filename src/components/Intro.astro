@@ -33,4 +33,43 @@
         max-width: 65ch;
         text-align: center;
     }
+
+    .line {
+        will-change: transform, opacity;
+    }
 </style>
+
+<script>
+    import gsap from "gsap";
+    import { SplitText } from "gsap/SplitText";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(SplitText, ScrollTrigger);
+
+    window.addEventListener("DOMContentLoaded", () => {
+        document.fonts.ready.then(() => {
+            const paragraphs = gsap.utils.toArray(".intro__text");
+
+            paragraphs.forEach((p: HTMLElement) => {
+                const split = SplitText.create(p, {
+                    type: "lines, words",
+                    linesClass: "line",
+                });
+
+                gsap.from(split.words, {
+                    yPercent: 120,
+                    opacity: 0,
+                    stagger: 0.05,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: p,
+                        start: "top 80%", // Start when top of paragraph hits 80% down the viewport
+                        end: "top 40%",
+                        scrub: 1,
+                    },
+                });
+            });
+        });
+    });
+</script>
