@@ -4,37 +4,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectList from "../components/ProjectList.astro";
 import Hero from "../components/Hero.astro";
 import Intro from "../components/Intro.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout>
-    <div id="smooth-wrapper">
-        <div id="smooth-content">
-            <main>
-                <Hero />
-                <Intro />
-                <!-- <ProjectList /> -->
-            </main>
-            <Footer />
-        </div>
-    </div>
+    <Hero />
+    <Intro />
+    <ProjectList />
 </BaseLayout>
-
-<script>
-    import gsap from "gsap";
-    import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-    gsap.registerPlugin(ScrollSmoother);
-
-    window.addEventListener("DOMContentLoaded", () => {
-        const mm = gsap.matchMedia();
-
-        mm.add("(min-width: 768px)", () => {
-            ScrollSmoother.create({
-                smooth: 1,
-                effects: true,
-                normalizeScroll: true,
-            });
-        });
-    });
-</script>

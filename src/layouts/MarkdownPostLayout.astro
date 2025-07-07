@@ -1,0 +1,129 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import "../styles/markdown.css";
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout>
+    <article class="project">
+        <header class="project__header">
+            <button class="project__back-button" onclick="history.back()">
+                ← Back
+            </button>
+            <h1 class="project__title">{frontmatter.title}</h1>
+            {
+                frontmatter.date && (
+                    <time class="project__date" datetime={frontmatter.date}>
+                        {new Date(frontmatter.date).toLocaleDateString(
+                            "nl-NL",
+                            {
+                                day: "2-digit",
+                                month: "2-digit",
+                                year: "numeric",
+                            }
+                        )}
+                    </time>
+                )
+            }
+            {
+                frontmatter.description && (
+                    <p class="project__description">
+                        {frontmatter.description}
+                    </p>
+                )
+            }
+            {
+                (frontmatter.githubUrl || frontmatter.url) && (
+                    <ul class="project__links">
+                        {frontmatter.githubUrl && (
+                            <li>
+                                <a
+                                    href={frontmatter.githubUrl}
+                                    class="project__link"
+                                >
+                                    GitHub
+                                </a>
+                            </li>
+                        )}
+                        {frontmatter.url && (
+                            <li>
+                                <a href={frontmatter.url} class="project__link">
+                                    Live site
+                                </a>
+                            </li>
+                        )}
+                    </ul>
+                )
+            }
+            {
+                frontmatter.image?.url && (
+                    <img
+                        src={frontmatter.image.url}
+                        alt={frontmatter.image.alt || ""}
+                        class="project__image"
+                    />
+                )
+            }
+            {
+                frontmatter.tags && (
+                    <div class="project__tags">
+                        {frontmatter.tags.map((tag) => (
+                            <span class="project__tag">{tag}</span>
+                        ))}
+                    </div>
+                )
+            }
+        </header>
+
+        <div class="markdown__content">
+            <slot />
+        </div>
+    </article>
+</BaseLayout>
+
+<style>
+    .project {
+        display: flex;
+        flex-direction: column;
+        gap: var(--p-gutter--xlarge);
+        max-width: 65rem;
+    }
+
+    .project__header {
+        display: flex;
+        flex-direction: column;
+        gap: var(--p-gutter);
+        justify-content: center;
+    }
+
+    .project__description {
+        font-style: italic;
+    }
+
+    .project__image {
+        border-radius: var(--b-radius--small);
+        max-width: 25rem;
+        width: 100%;
+    }
+
+    .project__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--p-gutter--small);
+    }
+
+    .project__tag {
+        background: var(--c-red);
+        border-radius: var(--b-radius--xsmall);
+        color: var(--c-beige);
+        font-size: var(--font-size-text-small);
+        font-weight: var(--font-weight-semibold);
+        padding: var(--p-gutter--xsmall);
+    }
+
+    .project__links {
+        display: flex;
+        gap: var(--p-gutter--small);
+    }
+</style>

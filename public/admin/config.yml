@@ -136,3 +136,9 @@ collections:
         widget: "list"
         allow_add: true
         required: false
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          required: false,
+        }

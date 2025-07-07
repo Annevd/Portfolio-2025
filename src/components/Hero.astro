@@ -4,7 +4,7 @@ import Circle from "./ui/Circle.astro";
 import ArrowDown from "./icons/ArrowDown.astro";
 ---
 
-<div class="hero__container">
+<section class="hero hero__container">
     <div class="hero__title-container">
         <h1 class="hero__title">Anne van Dijk</h1>
         <Scribble />
@@ -16,7 +16,7 @@ import ArrowDown from "./icons/ArrowDown.astro";
     </p>
 
     <a class="hero__cta" href="#">Scroll to explore <ArrowDown /></a>
-</div>
+</section>
 
 <style>
     .hero__container {
@@ -27,7 +27,6 @@ import ArrowDown from "./icons/ArrowDown.astro";
         justify-content: center;
         min-height: 100vh; /* fallback for older browsers */
         min-height: 100svh;
-        padding: var(--p-gutter);
         position: relative;
     }
 

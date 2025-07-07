@@ -6,42 +6,44 @@ const { project } = Astro.props;
 <li class="project">
     <SvgBorder />
 
-    <div class="project__content">
-        <figure class="project__image-container">
-            {
-                project.data.image && project.data.image.url ? (
-                    <img
-                        class="project__image"
-                        src={project.data.image.url}
-                        alt=""
-                        width="300"
-                        height="200"
-                    />
-                ) : (
-                    <img
-                        class="project__image"
-                        src="/assets/images/fallback-image.png"
-                        alt=""
-                        loading="lazy"
-                        width="300"
-                        height="200"
-                    />
-                )
-            }
-        </figure>
-        <div class="project__text">
-            <h3 class="project__text-title">{project.data.title}</h3>
-            <p class="project__description">{project.data.description}</p>
-        </div>
+    <a href={`/projects/${project.id}`} class="project__link">
+        <div class="project__content">
+            <figure class="project__image-container">
+                {
+                    project.data.image && project.data.image.url ? (
+                        <img
+                            class="project__image"
+                            src={project.data.image.url}
+                            alt=""
+                            width="300"
+                            height="200"
+                        />
+                    ) : (
+                        <img
+                            class="project__image"
+                            src="/assets/images/fallback-image.png"
+                            alt=""
+                            loading="lazy"
+                            width="300"
+                            height="200"
+                        />
+                    )
+                }
+            </figure>
+            <div class="project__text">
+                <h3 class="project__text-title">{project.data.title}</h3>
+                <p class="project__description">{project.data.description}</p>
+            </div>
 
-        <div class="project__tags">
-            {
-                project.data.tags
-                    .filter((tag) => tag.trim() !== "")
-                    .map((tag) => <span class="project__tag">{tag}</span>)
-            }
+            <div class="project__tags">
+                {
+                    project.data.tags
+                        .filter((tag) => tag.trim() !== "")
+                        .map((tag) => <span class="project__tag">{tag}</span>)
+                }
+            </div>
         </div>
-    </div>
+    </a>
 </li>
 
 <style>
@@ -51,6 +53,12 @@ const { project } = Astro.props;
         position: absolute;
         top: 0;
         width: 100%;
+    }
+
+    .project__link {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
     }
 
     .project__content {
