@@ -3,9 +3,6 @@ import SvgBorder from "./ui/SvgBorder.astro";
 const { project } = Astro.props;
 ---
 
-<li class="project">
-    <SvgBorder />
-
     <a href={`/projects/${project.id}`} class="project__link">
         <div class="project__content">
             <figure class="project__image-container">
@@ -47,14 +44,6 @@ const { project } = Astro.props;
 </li>
 
 <style>
-    .project {
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
-
     .project__link {
         color: inherit;
         cursor: pointer;
@@ -102,9 +91,8 @@ const { project } = Astro.props;
         transition: font-size 0.2s ease-out;
     }
 
-    .project__text-title.is-long {
-        font-size: var(--font-size-heading-4);
-        line-height: 1;
+    .project__description {
+        display: none;
     }
 
     .project__tags {
@@ -123,16 +111,15 @@ const { project } = Astro.props;
         padding: var(--p-gutter--xsmall);
     }
 
-    @container project-list (max-width: 330px) {
-        .project__image-container {
-            aspect-ratio: 16 / 9;
-        }
+    @media (min-width: 1080px) {
         .project__description {
-            display: -webkit-box;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
+            display: block;
+        }
+    }
+
+    @media (max-height: 768px) {
+        .project__description {
+            display: none;
         }
     }
 </style>

@@ -12,32 +12,9 @@ import Footer from "../components/Footer.astro";
         <title>Portfolio 2025</title>
     </head>
     <body>
-        <div id="smooth-wrapper">
-            <div id="smooth-content">
-                <main>
-                    <slot />
-                </main>
-                <Footer />
-            </div>
-        </div>
+        <main>
+            <slot />
+        </main>
+        <Footer />
     </body>
 </html>
-
-<script>
-    import gsap from "gsap";
-    import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-    gsap.registerPlugin(ScrollSmoother);
-
-    window.addEventListener("DOMContentLoaded", () => {
-        const mm = gsap.matchMedia();
-
-        mm.add("(min-width: 768px)", () => {
-            ScrollSmoother.create({
-                smooth: 1,
-                effects: true,
-                normalizeScroll: true,
-            });
-        });
-    });
-</script>
