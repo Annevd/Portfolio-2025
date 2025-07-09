@@ -13,3 +13,26 @@ tags:
   - Gallery
   - Astro
 ---
+
+## What You'll Find
+
+This site is a curated collection of:
+
+- A variety of projects I’ve completed during my studies, demonstrating what I’ve learned and built.
+
+- Reflections and notes from *We Love Web* presentations: inspiring talks by industry professionals, organized by [FDND](https://fdnd.nl/).
+
+- A gallery of digital artwork and a playground for experimenting with new technologies, frameworks, and design trends.
+
+## Why I Built This
+
+I created this site as both a creative outlet and as a first portfolio. It’s a space where I could explore frontend development, reflect on what I’ve learned, and share my journey with others.
+
+## Demo
+
+<img src="/assets/demos/i-love-web-demo.gif" alt="I love Web Demo"/>
+
+
+## Technical details
+
+This portfolio was built with Astro.

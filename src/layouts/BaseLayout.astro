@@ -1,5 +1,6 @@
 ---
 import "../styles/base.css";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -11,6 +12,32 @@ import "../styles/base.css";
         <title>Portfolio 2025</title>
     </head>
     <body>
-        <slot />
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main>
+                    <slot />
+                </main>
+                <Footer />
+            </div>
+        </div>
     </body>
 </html>
+
+<script>
+    import gsap from "gsap";
+    import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+    gsap.registerPlugin(ScrollSmoother);
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const mm = gsap.matchMedia();
+
+        mm.add("(min-width: 768px)", () => {
+            ScrollSmoother.create({
+                smooth: 1,
+                effects: true,
+                normalizeScroll: true,
+            });
+        });
+    });
+</script>

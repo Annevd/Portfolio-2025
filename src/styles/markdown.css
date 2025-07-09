@@ -1,0 +1,41 @@
+main {
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - var(--p-gutter) * 3);
+}
+
+.markdown__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-gutter);
+}
+
+.markdown__content h2 {
+    margin-top: var(--p-gutter--small);
+}
+
+.markdown__content ul {
+    list-style: disc;
+    padding-left: var(--p-gutter);
+}
+
+.markdown__content ol {
+    list-style: decimal;
+    padding-left: var(--p-gutter);
+}
+
+.markdown__content li::marker {
+    color: var(--c-pink);
+}
+
+.markdown__content img {
+    border-radius: var(--b-radius--small);
+    max-width: 100%;
+    width: 100%;
+}
+
+.markdown__content code {
+    background: var(--c-pink);
+    border-radius: var(--b-radius--xsmall);
+    padding: 0 var(--p-gutter--xsmall);
+}
