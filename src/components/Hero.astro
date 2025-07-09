@@ -15,8 +15,8 @@ import ArrowDown from "./icons/ArrowDown.astro";
         Developer & Artist
     </p>
 
-    <a class="hero__cta" href="#">Scroll to explore <ArrowDown /></a>
-</section>
+    <a class="hero__cta" href="#projects">Scroll to explore <ArrowDown /></a>
+</div>
 
 <style>
     .hero__container {
@@ -84,24 +84,3 @@ import ArrowDown from "./icons/ArrowDown.astro";
         }
     }
 </style>
-
-<script>
-    import gsap from "gsap";
-    import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-    gsap.registerPlugin(ScrollSmoother);
-
-    window.addEventListener("DOMContentLoaded", () => {
-        const smoother = ScrollSmoother.get();
-
-        const cta = document.querySelector(".hero__cta");
-        cta?.addEventListener("click", (e) => {
-            e.preventDefault();
-            const target = document.querySelector("#archive");
-
-            if (target && smoother) {
-                smoother.scrollTo(target, true);
-            }
-        });
-    });
-</script>
