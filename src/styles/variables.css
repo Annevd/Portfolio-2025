@@ -1,14 +1,16 @@
 :root {
     /* --- Colors --- */
 
-    --c-red: #b3261e;
-    --c-beige: #faf7f2;
-    --c-beige--dark: #f0eae1;
-    --c-charcoal: #1e1e1e;
-    --c-taupe: #9e8a7a;
-    --c-brown: #5b4a42;
-    --c-brown--dark: #433833;
-    --c-pink: #de9c95;
+    --c-beige: #F9F9F7;
+    --c-charcoal: #333333;
+    --c-pink: #D32C6A;
+    --c-pink--light: #f1ced9;
+    --c-blue: #90C8E4;
+    --c-blue--light: #F6FCFF;
+    --c-blue--dark: #1d71bb;
+    --c-green: #619A72;
+    --c-green--light: #96c3a3;
+    --c-green--dark: #387d4c;
 
     /* --- Spacing / sizing ---*/
 
@@ -47,9 +49,9 @@
 
     /* --- Base colors --- */
 
-    --text-color: var(--c-brown--dark);
-    --heading-color: var(--c-red);
-    --accent-color: var(--c-red);
-    --link-color: var(--c-brown);
+    --text-color: var(--c-charcoal);
+    --heading-color: var(--c-charcoal);
+    --accent-color: var(--c-blue);
+    --link-color: var(--c-charcoal);
     --body-background: var(--c-beige);
 }

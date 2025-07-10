@@ -114,12 +114,24 @@ const { frontmatter } = Astro.props;
     }
 
     .project__tag {
-        background: var(--c-red);
+        background: var(--c-pink);
         border-radius: var(--b-radius--xsmall);
         color: var(--c-beige);
         font-size: var(--font-size-text-small);
         font-weight: var(--font-weight-semibold);
         padding: var(--p-gutter--xsmall);
+    }
+
+    .project__tag:nth-child(3n + 1) {
+        background: var(--c-pink);
+    }
+    
+    .project__tag:nth-child(3n + 2) {
+        background: var(--c-green--dark);
+    }
+
+    .project__tag:nth-child(3n) {
+        background: var(--c-blue--dark);
     }
 
     .project__links {

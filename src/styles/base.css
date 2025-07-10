@@ -80,12 +80,12 @@ a {
     cursor: pointer;
     font-weight: var(--font-weight-extrabold);
     text-decoration: underline;
-    text-decoration-color: var(--c-pink);
+    text-decoration-color: var(--c-green--light);
     text-decoration-thickness: 2px;
     transition: color 0.3s ease-out;
 
     &:hover {
-        color: var(--accent-color);
+        color: var(--c-green);
     }
 }
 
