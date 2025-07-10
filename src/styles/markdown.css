@@ -35,7 +35,8 @@ main {
 }
 
 .markdown__content code {
-    background: var(--c-pink);
+    background: var(--c-pink--light);
+    border: 1px solid var(--c-pink);
     border-radius: var(--b-radius--xsmall);
     padding: 0 var(--p-gutter--xsmall);
 }
