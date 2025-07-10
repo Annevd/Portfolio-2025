@@ -6,7 +6,7 @@ description: Project where I had to redesign and build my profile card. Inspired
   by Y2K Cyberpunk.
 githubUrl: https://github.com/Annevd/your-tribe-for-life-profile-card
 image:
-  url: /assets/images/profile-card-2.png
+  url: /src/assets/images/profile-card-2.png
 tags:
   - "2024"
   - Redesign
@@ -30,7 +30,7 @@ For this version of my profile card, I wanted to push my creative boundaries by 
 
 ## Demo
 
-<img src="/assets/demos/profile-card-2-demo.gif" alt="Profile Card V2 Demo"/>
+<img src="/assets/demos/profile-card-2-demo.gif" alt="Profile Card V2 Demo" loading="lazy"/>
 
 ## Technical Details
 

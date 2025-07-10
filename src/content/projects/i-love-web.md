@@ -6,7 +6,7 @@ description: On this I-love-web website I show who I am, what kind of projects I
   have made, frontend talks I have attended and other creations I have made.
 githubUrl: https://github.com/Annevd/i-love-web
 image:
-  url: /assets/images/portfolio-2024.png
+  url: /src/assets/images/portfolio-2024.png
 tags:
   - "2024"
   - Portfolio
@@ -30,7 +30,7 @@ I created this site as both a creative outlet and as a first portfolio. It’s a
 
 ## Demo
 
-<img src="/assets/demos/i-love-web-demo.gif" alt="I love Web Demo"/>
+<img src="/assets/demos/i-love-web-demo.gif" alt="I love Web Demo" loading="lazy"/>
 
 
 ## Technical details

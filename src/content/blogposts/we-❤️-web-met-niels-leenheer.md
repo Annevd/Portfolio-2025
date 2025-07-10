@@ -3,7 +3,7 @@ title: We ❤️ Web met Niels Leenheer
 date: 2025-04-25
 description: Een we-love-web over Browsers en HTML
 image:
-    url: /assets/images/niels.jpg
+    url: /src/assets/images/niels.jpg
 tags:
     - Browsers
     - HTML

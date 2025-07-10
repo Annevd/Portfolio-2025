@@ -1,47 +1,67 @@
 ---
-import SvgBorder from "./ui/SvgBorder.astro";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import fallbackImage from "../assets/images/fallback-image.png";
+
 const { project } = Astro.props;
+
+const imagePath = project.data.image?.url;
+const altText = project.data.image?.alt || "";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/images/**/*.{jpeg,jpg,png,webp,avif}"
+);
+
+let imageSrc = null;
+
+if (imagePath) {
+    const importer = images[imagePath];
+    if (importer) {
+        const mod = await importer();
+        imageSrc = mod.default;
+    } else {
+        console.warn(`Image not found: ${imagePath}`);
+    }
+}
 ---
 
-    <a href={`/projects/${project.id}`} class="project__link">
-        <div class="project__content">
-            <figure class="project__image-container">
-                {
-                    project.data.image && project.data.image.url ? (
-                        <img
-                            class="project__image"
-                            src={project.data.image.url}
-                            alt=""
-                            width="300"
-                            height="200"
-                        />
-                    ) : (
-                        <img
-                            class="project__image"
-                            src="/assets/images/fallback-image.png"
-                            alt=""
-                            loading="lazy"
-                            width="300"
-                            height="200"
-                        />
-                    )
-                }
-            </figure>
-            <div class="project__text">
-                <h3 class="project__text-title">{project.data.title}</h3>
-                <p class="project__description">{project.data.description}</p>
-            </div>
-
-            <div class="project__tags">
-                {
-                    project.data.tags
-                        .filter((tag) => tag.trim() !== "")
-                        .map((tag) => <span class="project__tag">{tag}</span>)
-                }
-            </div>
+<a href={`/projects/${project.id}`} class="project__link">
+    <div class="project__content">
+        <figure class="project__image-container">
+            {
+                imageSrc ? (
+                    <Image
+                        class="project__image"
+                        src={imageSrc}
+                        alt={altText}
+                        format="webp"
+                        layout="constrained"
+                    />
+                ) : (
+                    <Image
+                        class="project__image"
+                        src={fallbackImage}
+                        alt="Fallback image"
+                        format="webp"
+                        layout="constrained"
+                    />
+                )
+            }
+        </figure>
+        <div class="project__text">
+            <h3 class="project__text-title">{project.data.title}</h3>
+            <p class="project__description">{project.data.description}</p>
         </div>
-    </a>
-</li>
+
+        <div class="project__tags">
+            {
+                project.data.tags
+                    .filter((tag) => tag.trim() !== "")
+                    .map((tag) => <span class="project__tag">{tag}</span>)
+            }
+        </div>
+    </div>
+</a>
 
 <style>
     .project__link {

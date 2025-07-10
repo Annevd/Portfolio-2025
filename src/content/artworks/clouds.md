@@ -1,7 +1,7 @@
 ---
 title: Clouds
 image:
-    url: /assets/images/clouds.jpg
+    url: /src/assets/images/clouds.jpg
     alt: Oil painting of clouds
     width: 1592
     height: 2219

@@ -6,7 +6,7 @@ description: For this project I had to design and create an interface for a
   client that would make users happy.
 githubUrl: https://github.com/Annevd/pleasurable-ui
 image:
-  url: /assets/images/tumi-mundo.png
+  url: /src/assets/images/tumi-mundo.png
 tags:
   - "2024"
   - Pleasurable
@@ -46,7 +46,7 @@ Importantly, I made sure the **carousel works without JavaScript** using `overfl
 
 ## Demo
 
-<img src="/assets/demos/tumi-mundo-demo.gif" alt="Tumi Mundo Website Demo"/>
+<img src="/assets/demos/tumi-mundo-demo.gif" alt="Tumi Mundo Website Demo" loading="lazy"/>
 
 ## Technical details
 

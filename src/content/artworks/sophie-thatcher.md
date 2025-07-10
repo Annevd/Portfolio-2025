@@ -1,7 +1,7 @@
 ---
 title: Sophie Thatcher
 image:
-    url: /assets/images/sophie.jpg
+    url: /src/assets/images/sophie.jpg
     alt: Graphite drawing of Sophie Thatcher
     width: 1069
     height: 1462

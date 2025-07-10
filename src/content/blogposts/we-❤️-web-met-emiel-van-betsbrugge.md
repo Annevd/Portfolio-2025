@@ -3,7 +3,7 @@ title: We ❤️ Web met  Emiel van Betsbrugge
 date: 2024-11-22
 description: Een we-love-web van Emiel van Betsbrugge, WebGL Developer bij Active Theory
 image:
-    url: /assets/images/emiel.png
+    url: /src/assets/images/emiel.png
 tags:
     - Interactivity
     - Creative

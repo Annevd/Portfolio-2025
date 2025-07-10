@@ -4,7 +4,7 @@ date: 2025-01-17
 description: Een we-love-web van Dave Bitter, Frontend Lead van IO, over The
     Rise of AI-powered Voice Interfaces (on the web)
 image:
-    url: /assets/images/dave.png
+    url: /src/assets/images/dave.png
 tags:
     - AI
 ---
