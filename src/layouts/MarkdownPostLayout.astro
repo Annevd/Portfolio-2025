@@ -122,6 +122,18 @@ const { frontmatter } = Astro.props;
         padding: var(--p-gutter--xsmall);
     }
 
+    .project__tag:nth-child(3n + 1) {
+        background: var(--c-pink);
+    }
+    
+    .project__tag:nth-child(3n + 2) {
+        background: var(--c-green--dark);
+    }
+
+    .project__tag:nth-child(3n) {
+        background: var(--c-blue--dark);
+    }
+
     .project__links {
         display: flex;
         gap: var(--p-gutter--small);

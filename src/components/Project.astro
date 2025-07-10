@@ -112,6 +112,18 @@ const { project } = Astro.props;
         padding: var(--p-gutter--xsmall);
     }
 
+    .project__tag:nth-child(3n + 1) {
+        background: var(--c-pink);
+    }
+
+    .project__tag:nth-child(3n + 2) {
+        background: var(--c-green--dark);
+    }
+    
+    .project__tag:nth-child(3n) {
+        background: var(--c-blue--dark);
+    }
+
     @media (min-width: 1080px) {
         .project__description {
             display: block;
