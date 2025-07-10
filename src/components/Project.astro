@@ -51,11 +51,11 @@ const { project } = Astro.props;
     }
 
     .project__content {
-        background: var(--c-beige--dark);
+        background: var(--c-blue--light);
         border-radius: var(--b-radius--large);
         box-shadow: 0px 8px 20px 0px rgba(91, 74, 66, 0.3); /* Fallback shadow */
         box-shadow: 0px 8px 20px 0px
-            color-mix(in srgb, var(--c-brown) 30%, transparent);
+            color-mix(in srgb, var(--c-charcoal) 20%, transparent);
         display: flex;
         flex-direction: column;
         gap: var(--p-gutter);
@@ -88,6 +88,7 @@ const { project } = Astro.props;
     }
 
     .project__text-title {
+        color: var(--c-charcoal);
         transition: font-size 0.2s ease-out;
     }
 
@@ -103,7 +104,7 @@ const { project } = Astro.props;
     }
 
     .project__tag {
-        background: var(--c-red);
+        background: var(--c-pink);
         border-radius: var(--b-radius--xsmall);
         color: var(--c-beige);
         font-size: var(--font-size-text-small);
