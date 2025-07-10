@@ -16,7 +16,7 @@ projects.sort((a, b) => {
     class="cards"
     style={`
     --card-count: ${projects.length}; 
-    height: ${projects.length * 100}lvh; 
+    height: ${projects.length * 65}lvh; 
     timeline-scope: ${projects.map((_, i) => `--trigger-${i}`).join(", ")};
     --trigger-last: --trigger-${projects.length - 1};
     --trigger-1: --trigger-1;`}
@@ -49,7 +49,7 @@ projects.sort((a, b) => {
 
 <style>
     .cards {
-        height: calc(var(--card-count) * 100lvh); /* fallback */
+        height: calc(var(--card-count) * 65lvh); /* fallback */
         padding: 0;
         position: relative;
         width: 100%;
@@ -185,7 +185,7 @@ projects.sort((a, b) => {
 
         scrollTicks.forEach((tick, index) => {
             console.log(tick);
-            if (index === 0) return; // ❌ Skip the first card
+            if (index === 0) return; // Skip the first card
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: tick,
