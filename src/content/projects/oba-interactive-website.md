@@ -6,7 +6,7 @@ description: For this assignment I had to design and create an interactive
   website for a client.
 githubUrl: https://github.com/Annevd/fix-the-flow-interactive-website
 image:
-  url: /assets/images/oba.png
+  url: /src/assets/images/oba.png
 tags:
   - "2023"
   - Static
@@ -44,7 +44,7 @@ This structure helps avoid accidental deletions and gives the user control over 
 
 ## Demo
 
-<img src="/assets/demos/oba-demo.gif" alt="OBA Website Demo"/>
+<img src="/assets/demos/oba-demo.gif" alt="OBA Website Demo" loading="lazy"/>
 
 ## Technical details
 

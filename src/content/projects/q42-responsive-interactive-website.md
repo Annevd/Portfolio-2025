@@ -7,7 +7,7 @@ description: For this assignment I had to build a page for the Q42 website. On
   world.
 githubUrl: https://github.com/Annevd/Q42-responsive-interactieve-website
 image:
-  url: /assets/images/q42.png
+  url: /src/assets/images/q42.png
 tags:
   - "2024"
   - Interactive
@@ -47,7 +47,7 @@ Key additions and enhancements I implemented:
 
 ## Demo
 
-<img src="/assets/demos/q42-demo.gif" alt="Q42 Website Demo"/>
+<img src="/assets/demos/q42-demo.gif" alt="Q42 Website Demo" loading="lazy"/>
 
 ## Technical details
 

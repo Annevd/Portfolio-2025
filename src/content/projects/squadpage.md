@@ -7,7 +7,7 @@ description: Project where I had to build a website for our squad with a team
   against your classmates!
 githubUrl: https://github.com/Annevd/connect-your-tribe-squad-page
 image:
-  url: /assets/images/squadpage.png
+  url: /src/assets/images/squadpage.png
 tags:
   - "2024"
   - Interactive
@@ -42,7 +42,7 @@ Highlights of what I built:
 
 ## Demo
 
-<img src="/assets/demos/squadpage-demo.gif" alt="Squadpage Website Demo"/>
+<img src="/assets/demos/squadpage-demo.gif" alt="Squadpage Website Demo" loading="lazy"/>
 
 ## Technical details
 

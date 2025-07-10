@@ -1,7 +1,7 @@
 ---
 title: Oppenheimer
 image:
-    url: /assets/images/oppenheimer.jpg
+    url: /src/assets/images/oppenheimer.jpg
     alt: Oil painting of Cillian Murphy
     width: 2515
     height: 1508

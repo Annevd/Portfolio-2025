@@ -3,7 +3,7 @@ title: We ❤️ Web met Kalok Yeung
 date: 2025-05-25
 description: "Freelance Creative Director/Designer: Emotional Interface"
 image:
-    url: /assets/images/kalok.webp
+    url: /src/assets/images/kalok.webp
 tags:
     - Creative
     - Design

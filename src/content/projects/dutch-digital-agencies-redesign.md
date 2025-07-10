@@ -5,7 +5,7 @@ date: 2024-06-20
 description: Project where I had to redesign and build the current website of the DDA.
 githubUrl: https://github.com/Annevd/proof-of-concept
 image:
-  url: /assets/images/dda.png
+  url: /src/assets/images/dda.png
 tags:
   - "2024"
   - Redesign
@@ -49,7 +49,7 @@ This wasn’t just about building a homepage, it was about making strategic desi
 
 ## Demo
 
-<img src="/assets/demos/DDA-demo.gif" alt="DDA Website Demo"/>
+<img src="/assets/demos/DDA-demo.gif" alt="DDA Website Demo" loading="lazy"/>
 
 ## What I Learned
 

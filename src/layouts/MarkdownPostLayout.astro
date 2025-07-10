@@ -2,7 +2,29 @@
 import BaseLayout from "./BaseLayout.astro";
 import "../styles/markdown.css";
 
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
 const { frontmatter } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/images/*"
+);
+
+const imageUrl = frontmatter.image?.url; // e.g. "/src/assets/images/bieb-in-bloei.png"
+let resolvedImage: { default: ImageMetadata } | undefined = undefined;
+
+if (imageUrl) {
+    const imageImportFn = images[imageUrl];
+
+    if (imageImportFn) {
+        resolvedImage = await imageImportFn();
+    } else {
+        throw new Error(
+            `Image "${imageUrl}" not found in /src/assets/images/.`
+        );
+    }
+}
 ---
 
 <BaseLayout>
@@ -57,11 +79,12 @@ const { frontmatter } = Astro.props;
                 )
             }
             {
-                frontmatter.image?.url && (
-                    <img
-                        src={frontmatter.image.url}
+                resolvedImage && (
+                    <Image
+                        src={resolvedImage.default}
                         alt={frontmatter.image.alt || ""}
                         class="project__image"
+                        loading="eager"
                     />
                 )
             }
@@ -103,6 +126,7 @@ const { frontmatter } = Astro.props;
 
     .project__image {
         border-radius: var(--b-radius--small);
+        height: 100%;
         max-width: 25rem;
         width: 100%;
     }

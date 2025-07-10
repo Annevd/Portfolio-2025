@@ -6,7 +6,7 @@ description: Enriched and improved the Bieb in Bloei website with mascot Harry,
   responsiveness and accessibility.
 githubUrl: https://github.com/Annevd/buurtcampus-oost
 image:
-  url: /assets/images/bieb-in-bloei.png
+  url: /src/assets/images/bieb-in-bloei.png
 tags:
   - "2025"
   - Responsive
@@ -50,7 +50,7 @@ Specific improvements I worked on:
 
 ## Demo
 
-<img src="/assets/demos/BIB-demo.gif" alt="Bieb in Bloei Website Demo"/>
+<img src="/assets/demos/BIB-demo.gif" alt="Bieb in Bloei Website Demo" loading="lazy"/>
 
 ## What I Learned
 

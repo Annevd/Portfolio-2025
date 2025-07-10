@@ -3,7 +3,7 @@ title: We ❤️ Web met Nicolas Garnier
 date: 2024-10-04
 description: Een we-love-web over creativity en interactivity
 image:
-    url: /assets/images/lief-amsterdam.png
+    url: /src/assets/images/lief-amsterdam.png
 tags:
     - Interactivity
     - Creative

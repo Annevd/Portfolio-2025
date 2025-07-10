@@ -6,7 +6,7 @@ description: Project where I had to design and build a profile card. On
   hover/click a slideshow with my artworks appears.
 githubUrl: https://github.com/Annevd/connect-your-tribe-profile-card
 image:
-  url: /assets/images/profile-card-1.png
+  url: /src/assets/images/profile-card-1.png
 tags:
   - "2024"
   - NodeJS
@@ -42,7 +42,7 @@ The data is dynamically loaded using the [whois.fdnd.nl](https://whois.fdnd.nl) 
 
 ## Demo
 
-<img src="/assets/demos/profile-card-1-demo.gif" alt="Profile Card V1 Demo"/>
+<img src="/assets/demos/profile-card-1-demo.gif" alt="Profile Card V1 Demo" loading="lazy"/>
 
 ## Technical Details
 

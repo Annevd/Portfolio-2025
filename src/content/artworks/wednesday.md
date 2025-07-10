@@ -1,7 +1,7 @@
 ---
 title: Wednesday
 image:
-    url: /assets/images/wednesday.jpg
+    url: /src/assets/images/wednesday.jpg
     alt: Graphite drawing of Jenna Ortega as Wednesday
     width: 2691
     height: 1800

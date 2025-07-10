@@ -3,7 +3,7 @@ title: Het web is voor iedereen
 date: 2025-03-28
 description: Een we-love-web van Ischa Gast, over toegankelijkheid
 image:
-    url: /assets/images/ischa.jpg
+    url: /src/assets/images/ischa.jpg
 tags:
     - Accessibility
 ---

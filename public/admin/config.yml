@@ -3,8 +3,8 @@ backend:
   repo: annevd/portfolio-2025
   branch: cms-updates
 
-media_folder: "public/assets/images" # Location where files will be stored in the repo
-public_folder: "/assets/images" # The src attribute for uploaded media
+media_folder: "src/assets/images" # Location where files will be stored in the repo
+public_folder: "/src/assets/images" # The src attribute for uploaded media
 
 collections:
   - name: "blogposts"

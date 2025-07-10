@@ -8,7 +8,7 @@ const blogposts = defineCollection({
         description: z.string().optional(),
         image: z
             .object({
-                url: z.string().optional(),
+                url: z.string().nullable().optional(),
                 alt: z.string().optional(),
             })
             .optional(),
@@ -22,7 +22,7 @@ const artworks = defineCollection({
         title: z.string(),
         image: z
             .object({
-                url: z.string().optional(),
+                url: z.string().nullable().optional(),
                 alt: z.string().optional(),
                 width: z.number().optional(),
                 height: z.number().optional(),
@@ -42,7 +42,7 @@ const projects = defineCollection({
         githubUrl: z.string().optional(),
         image: z
             .object({
-                url: z.string().optional(),
+                url: z.string().nullable().optional(),
                 alt: z.string().optional(),
             })
             .optional(),

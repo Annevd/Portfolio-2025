@@ -1,7 +1,7 @@
 ---
 title: Interstellar
 image:
-    url: /assets/images/interstellar.jpg
+    url: /src/assets/images/interstellar.jpg
     alt: Graphite drawing of Interstellar, the movie
     width: 2162
     height: 1462

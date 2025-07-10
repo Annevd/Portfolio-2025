@@ -3,7 +3,7 @@ title: Beyond Tweening
 date: 2025-03-07
 description: Een we-love-web van Cassie Evans, Creative developer bij GSAP
 image:
-    url: /assets/images/gsap-cover.jpg
+    url: /src/assets/images/gsap-cover.jpg
 tags:
     - Creative
     - GSAP

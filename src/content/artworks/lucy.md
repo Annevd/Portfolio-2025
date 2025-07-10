@@ -1,7 +1,7 @@
 ---
 title: Lucy
 image:
-    url: /assets/images/lucy.jpg
+    url: /src/assets/images/lucy.jpg
     alt: Graphite drawing of Ella Purnell
     width: 1822
     height: 2315
