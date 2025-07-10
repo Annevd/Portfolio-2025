@@ -33,7 +33,7 @@ Here’s how the interaction works:
 - The user clicks the red **trash can** icon next to a book
 - A **confirmation dialog** appears with two options:
   - _“Yes, delete”:_ Confirms the removal  
-  - _“No, cancel”:_ – Cancels the action
+  - _“No, cancel”:_ Cancels the action
 - If confirmed:
   - A second **success message** appears letting the user know the book was removed
   - The user can exit this by clicking the **close** icon
